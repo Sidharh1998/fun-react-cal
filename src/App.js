@@ -1,24 +1,38 @@
-import logo from './logo.svg';
+import React,{useState} from 'react';
 import './App.css';
 
 function App() {
+let butarr=["c","/","*","-","7","8","9","+","4","5","6","1","2","3","=","0","."]
+let[calculate,setCalculate]= useState("")
+function result(){
+try{
+setCalculate(eval(calculate))
+}
+catch(err){
+  setCalculate("ERROR")
+}
+}
+function clear(){
+setCalculate("")
+}
+function handlecal(e){
+setCalculate(calculate + e.target.innerText)
+}
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    
+    <input type='text' value={calculate}></input>
+    <div className='grid'> 
+      {butarr.map((item,index)=>{
+      return(
+        <button onClick={item==="=" ? result:item==="c"? clear:handlecal } className={`item-${index}`}>{item}</button>
+      )
+     })}</div>
+    
+
+
+    </>
+
   );
 }
 

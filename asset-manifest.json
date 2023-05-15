@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/fun-react-cal/static/css/main.3ad183c0.css",
+    "main.js": "/fun-react-cal/static/js/main.0f1538af.js",
+    "index.html": "/fun-react-cal/index.html",
+    "main.3ad183c0.css.map": "/fun-react-cal/static/css/main.3ad183c0.css.map",
+    "main.0f1538af.js.map": "/fun-react-cal/static/js/main.0f1538af.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3ad183c0.css",
+    "static/js/main.0f1538af.js"
+  ]
+}
